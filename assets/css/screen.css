@@ -1,0 +1,338 @@
+/* ==========================================================================
+   0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
+   ========================================================================== */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body { margin: 0; }
+article, aside, details,
+figcaption, figure,
+footer, header,
+main, menu, nav,
+section, summary { display:block; }
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) { display: none; height: 0; }
+[hidden], template { display: none; }
+a { background-color: transparent;}
+a:active, a:hover { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+mark { background: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 1em 40px; }
+hr { box-sizing: content-box; height: 0; }
+pre { overflow: auto; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button { overflow: visible; }
+button, select { text-transform: none; }
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"],
+input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend { border: 0; padding: 0; }
+textarea { overflow: auto; }
+optgroup { font-weight: bold; }
+table{ border-collapse: collapse; border-spacing: 0; }
+td, th{ padding: 0; }
+
+
+/*
+              General
+*/
+
+@font-face {
+    font-family: Margot;
+    src: url('/assets/fonts/margot-regular.ttf');
+}
+
+
+@font-face {
+    font-family: Margot Bd;
+    src: url('/assets/fonts/Margot-Bold.ttf');
+}
+
+
+@font-face {
+    font-family: Lato Bold;
+    src: url('/assets/fonts/Lato-Bold.ttf');
+}
+
+/*
+
+              Content Pages
+
+*/
+
+.anchor
+{
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  max-height: 120vh;
+  transform: skewY(-12deg);
+  background-color: #208fc7;
+  margin-top: -12%;
+  padding-top: 12%;
+  text-align: center;
+}
+
+.pages .anchor:nth-child(2n+0)
+{
+  background-color: #fff;
+  color: #208fc7;
+}
+
+.pages .anchor:nth-child(2n+1)
+{
+  background-color: #208fc7;
+  color: #fff;
+}
+
+.pages .anchor:nth-child(2n+3)
+{
+  transform: skewY(0deg);
+}
+
+.pages .anchor:nth-child(2n+3) .post
+{
+  transform: skewY(0deg);
+}
+
+#header
+{
+  margin-top: 0vh;
+  height: 110vh;
+  position: relative;
+}
+
+.post
+{
+  padding: 5em;
+  padding-top: 0;
+  /*margin-top: 150px;*/
+  height: 100%;
+  transform:skewY(12deg);
+}
+
+#header-content
+{
+  background-color: #208fc7;
+  background-image: url('/assets/images/fundoheader.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 5%;
+  height: 100%;
+}
+
+#header-container
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 110%;
+  position: relative;
+  top: -10%;
+  text-align: center;
+}
+
+#header-title
+{/* FIXME: Melhorar fonte */
+  position: absolute;
+  color: #FFF;
+  font-family: "Lato Bold";
+  font-size: 45px;
+  top: 30%;
+  left: 23%;
+}
+
+#header-title span
+{
+  position: relative;
+  /*left: 10em;*/
+}
+
+/*
+
+                  Logo
+
+*/
+
+#logo
+{
+  margin-left: -70px;
+  z-index: 101;
+  /*top: 6px;*/
+  left: 0px;
+  position: relative;
+  width: auto;
+  height: 100%;
+  /*fill: green;*/
+  transition-duration: 0.6s;
+  float: left;
+
+}
+
+#logotexto
+{
+  /*position: absolute;*/
+  margin-left: 10px;
+  left: 10px;
+  margin-top: 12px;
+  font-family: Margot;
+  font-weight: 800;
+  font-size: 20px;
+  opacity: 0;
+  transition-duration: 0.6s;
+  color: #FFF;
+  float: left;
+}
+
+/*
+
+              Menu
+
+*/
+.nav
+{
+  background-color: #208fc7;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  transition-delay: 0.4s;
+  transition-duration: 0.4s;
+  z-index: 100;
+  box-shadow: 0px -10px 30px black;
+}
+
+.nav > ul
+{
+  list-style: none;
+  margin: 0;
+  text-align: right;
+  width: 60%;
+  height: 100%;
+  margin-left: 17.5%;
+}
+
+.nav > ul > li
+{
+  font-family: "Margot", serif;
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  margin: 0;
+  top: 0;
+  transition-delay: 0.4s;
+  transition-duration: 0.4s;
+  height: 100%;
+  text-align: center;
+}
+
+.nav > ul > li > a
+{
+  color: #FFF;
+  font-style: none;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  outline: 0;
+  line-height: 3.5;
+  transition: line-height 0.4s ease 0.4s, color 0.2s;
+}
+.nav > ul > li > a:active
+{
+  outline: 0;
+  border: none;
+}
+
+.nav > ul > li > .predio
+{
+  z-index: -10;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  transition: height 0.4s ease 0s, bottom 0s ease 0.6s;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media (min-width: 1381px)
+{
+  #header-title
+  {
+    left: 30%;
+  }
+  .nav > ul
+  {
+    /*margin-left: 35.5%;*/
+  }
+
+  .nav > ul > li
+  {
+    /*margin-right: 4%;*/
+  }
+}

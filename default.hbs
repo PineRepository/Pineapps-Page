@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{@blog.title}}</title>
+    <link rel="stylesheet" type="text/css" href={{asset "css/screen.css"}} />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    {{ghost_head}}
+  </head>
+  <body>
+    <div id="wrapper" class="site-content">
+      {{{body}}}
+    </div>
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/typed.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+  </body>
+</html>
